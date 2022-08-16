@@ -69,7 +69,7 @@ void pcnt_init()
   pcnt_isr_register(pcnt_event_handler, NULL, 0, NULL);                   // Setup Register ISR handler
   pcnt_intr_enable(PCNT_UNIT_0);  
 
-  pcnt_set_filter_value(PCNT_UNIT_0, 1023);
+  pcnt_set_filter_value(PCNT_UNIT_0, 1023);                               // 1023 * 12,5 ns = 12,8 us
   pcnt_filter_enable(PCNT_UNIT_0); 
 
   pcnt_counter_pause(PCNT_UNIT_0);                                        // Pause PCNT unit
